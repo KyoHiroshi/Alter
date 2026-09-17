@@ -102,6 +102,26 @@ The system must prevent an unmanageable backlog of mandatory work and provide a 
 
 **Unresolved.** Define homework completion, thresholds for optional homework and reactivation, assignment rules, deadline setting, workload limits, grace periods, rescheduling, reward penalties, and how retention review interacts with current work and gates. Assessment timing, preparation windows, pass thresholds and reassessment rules remain open. Decide how recovery works near exams and after a prolonged absence.
 
+## Core Learning Model
+```mermaid
+flowchart TD
+    A["Diagnose current knowledge"] --> B["Recommend next topic"]
+    B --> C["Study lessons and worked examples"]
+    C --> D["Complete guided practice"]
+    D --> E["Complete required homework"]
+
+    E -->|More topics remain| B
+    E -->|Section ready| F["Take timed section assessment"]
+
+    F -->|Pass| G["Unlock progression"]
+    F -->|Not yet| H["Target gaps and remediate"]
+    H --> C
+
+    G --> I["Monitor retention"]
+    I -->|Secure| B
+    I -->|Decline detected| H
+```
+
 ## AI boundaries
 
 **Confirmed.** AI supplements the learning system rather than defining it. Appropriate uses include alternative explanations, hints, worked examples, misconception analysis, and explanations of lost marks.
